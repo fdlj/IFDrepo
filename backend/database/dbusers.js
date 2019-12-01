@@ -1,6 +1,6 @@
 module.exports = {
   // en prod
-    db: 'mongodb://127.0.0.1:27017/meandb'
+    db: 'mongodb://ip-172-31-16-110:27017/meandb'
     
     // en test
     // db: 'mongodb://localhost:27017/meandb',

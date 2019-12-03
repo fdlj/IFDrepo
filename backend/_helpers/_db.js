@@ -2,7 +2,14 @@ const config = require('../config.json');
 const mongoose = require('mongoose');
 
 mongoose.Promise = global.Promise;
-mongoose.connect(config.connectionString, {useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true}
+mongoose.connect(config.connectionString, 
+    {
+    useCreateIndex: true, 
+    useNewUrlParser: true, 
+    useUnifiedTopology: true, 
+    keepAlive: true, 
+    reconnectTries: Number.MAX_VALUE
+}
     ).then(() => {
         console.log('_db.js   Database ',config.connectionString,' sucessfully connected')
      },

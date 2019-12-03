@@ -4,7 +4,6 @@ const bcrypt = require('bcryptjs');
 const db = require('../_helpers/_db');
 
 const User = db.User;
-console.log('user.service db.User: ',User)
 
 module.exports = {
     authenticate,

@@ -1,17 +1,15 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-
 const app = express();
-
 const cors = require('cors');
 const config = require('./config.json');
 
 // pour l'authentification des users et l'interception d'erreurs
-//const jwt = require('./_helpers/jwt');
+const jwt = require('./_helpers/jwt');
 
 // pour interception et gestion des erreurs des erreurs
-//const errorHandler = require('./_helpers/error-handler');
+const errorHandler = require('./_helpers/error-handler');
 
 
 app.use(bodyParser.json());
@@ -20,16 +18,12 @@ app.use(cors());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use('/', express.static(path.join(__dirname, '../public')));
 
-
-
-
-//app.use(jwt());
-
-
+app.use(jwt());
 
 // STEP 1
 const datasetTestRoute = require('./routes/dataset-test.route');
 app.use('/api-dataset-test', datasetTestRoute);
+console.log('app.js: ', datasetTestRoute)
 
 
 // STEP 1.1
@@ -61,9 +55,7 @@ app.use('/api-sight-graph-om', sightGraphOmRoute);
 
 // users
 app.use('/users', require('./users/users.controller'));
-//app.use(errorHandler);
-
-
+app.use(errorHandler);
 
 // error handler
 app.use(function (err, req, res, next) {
@@ -71,7 +63,6 @@ app.use(function (err, req, res, next) {
   if (!err.statusCode) err.statusCode = 500; // If err has no specified error code, set error code to 'Internal Server Error (500)'
   res.status(err.statusCode).send(err.message); // All HTTP requests must have a response, so let's send back an error with its status code and message
 });
-
 
 
 module.exports = app;

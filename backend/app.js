@@ -8,10 +8,10 @@ const cors = require('cors');
 const config = require('./config.json');
 
 // pour l'authentification des users et l'interception d'erreurs
-const jwt = require('./_helpers/jwt');
+//const jwt = require('./_helpers/jwt');
 
 // pour interception et gestion des erreurs des erreurs
-const errorHandler = require('./_helpers/error-handler');
+//const errorHandler = require('./_helpers/error-handler');
 
 
 app.use(bodyParser.json());
@@ -23,7 +23,7 @@ app.use('/', express.static(path.join(__dirname, '../public')));
 
 
 
-app.use(jwt());
+//app.use(jwt());
 
 
 
@@ -61,7 +61,7 @@ app.use('/api-sight-graph-om', sightGraphOmRoute);
 
 // users
 app.use('/users', require('./users/users.controller'));
-app.use(errorHandler);
+//app.use(errorHandler);
 
 
 

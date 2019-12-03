@@ -6,7 +6,8 @@ mongoose.connect(config.connectionString,
     {
     useCreateIndex: true, 
     useNewUrlParser: true, 
-    useUnifiedTopology: true, 
+    useUnifiedTopology: true,
+    useFindAndModify: false,
     keepAlive: true, 
     reconnectTries: Number.MAX_VALUE
 }

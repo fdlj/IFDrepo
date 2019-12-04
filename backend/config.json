@@ -1,5 +1,5 @@
 ﻿{
-    "connectionString": "mongodb://localhost/node-mongo-registration-login-api",
+    "connectionString": "mongodb://localhost:27017/meandb",
     "secret": "FANTASTIC PSWD SYSTEM FOR IFD, THAT IS IMPOSSIBLE TO HACK"
 
 }

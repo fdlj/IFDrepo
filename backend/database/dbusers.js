@@ -1,3 +1,7 @@
 module.exports = {
-    db: 'mongodb://localhost:27017/meandb',
+  // en prod
+    db: 'mongodb://localhost:27017/meandb'
+    
+    // en test
+    // db: 'mongodb://localhost:27017/meandb',
   };

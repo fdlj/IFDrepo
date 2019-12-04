@@ -2,12 +2,10 @@
   "name": "backend",
   "version": "1.0.0",
   "description": "",
-  "private": true,
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node ./bin/www",
-    "prod": "PORT=80 node ./bin/www"
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",

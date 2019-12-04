@@ -1,10 +1,11 @@
 const express = require('express');
 const app = express();
 const datasetTestRoute = express.Router();
+
 const DatasetTestModel = require('../models/Dataset-test.model');
 
 datasetTestRoute.route('/read/:user').get((req, res) => {
-    console.log('datasetTestRoute.route : user', req.params.user);
+    //console.log('datasetARRoute.route : user', req.params.user);
 
     DatasetTestModel.aggregate([
         {$match: {$or: [{user:req.params.user}, {user: 'arbiter'}]}},

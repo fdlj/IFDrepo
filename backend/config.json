@@ -1,5 +1,5 @@
 ﻿{
-    "connectionString": "mongodb://ec2-18-218-104-150.us-east-2.compute.amazonaws.com:27017/meandb",
+    "connectionString": "mongodb://localhost/node-mongo-registration-login-api",
     "secret": "FANTASTIC PSWD SYSTEM FOR IFD, THAT IS IMPOSSIBLE TO HACK"
 
 }

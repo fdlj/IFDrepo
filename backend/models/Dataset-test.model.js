@@ -27,29 +27,3 @@ pop_sight_sel_user_name:    {type: String}
 });
 
 module.exports = mongoose.model('DatasetTest', DatasetTest);
-
-
-// résult req:
-// _id:           {type: String},
-// sc_test:       {type: Number},
-// sc_context:    {type: Number},
-// h_context:     {type: Number},
-// ar_test:       {type: Number},
-// dataset:       {type: String},
-// pop_all:       {type: Number},
-// pop_raw_h:     {type: Number},
-// pop_co:        {type: Number},
-// pop_om:        {type: Number},
-// pop_co_good:   {type: Number},
-// pop_om_good:   {type: Number},
-// pop_sight_sel_arbiter: {type: Number},
-// pop_sight_sel_user: {type: Number},
-// pop_sight_sel_user_name: {type: String}
-
-
-// _id:           {type: String},
-// sc_test:       {type: Number},
-// ar_arbiter:    {type: Number},
-// dataset:       {type: String},
-// user:          {type: String},
-// pop_sight_sel: {type: Number}

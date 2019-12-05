@@ -10,8 +10,8 @@
     "prod": "PORT=80 node ./bin/www"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "François de la Jousselinière",
+  "license": "restricted",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
